@@ -1,3 +1,4 @@
+/* Reset global: remove margens/paddings padrões do navegador e define o box-sizing */
 * {
     margin: 0;
     padding: 0;
@@ -5,9 +6,9 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Estilização do fundo da página e centralização absoluta do container */
 body {
-    /* Link de mídia direta resolvido para compatibilidade com o GitHub */
-    background: url('https://githubusercontent.com');
+    background: url('https://github.com/Raydineiizel/Jokenp-/blob/main/assets/14108.jpg?raw=true');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,17 +18,19 @@ body {
     min-height: 100vh;
 }
 
+/* Caixa branca onde fica o jogo */
 .container {
     padding: 30px;
-    background-color: rgba(255, 255, 255, 0.92); /* Efeito translúcido para combinar com o fundo */
+    background-color: rgba(255, 255, 255, 0.92); /* Fundo branco com leve transparência */
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;   
-    box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.4);/* Cria uma sombra suave atrás da caixa */
     min-width: 360px;
     text-align: center;
+    width: 150px;
 }
 
 h1 {
@@ -36,35 +39,40 @@ h1 {
     margin-bottom: 10px;
 }
 
+/* Espaçamento e alinhamento do grupo de botões */
 .buttons {
     margin: 25px 0;
     display: flex;
     gap: 25px;
 }
 
+/* Estilo padrão de todos os botões de jogada */
 button {
     width: 85px;
     height: 85px;
     font-size: 42px;
-    cursor: pointer;
+    cursor: pointer;              /* Transforma o ponteiro do mouse em 'mãozinha' */
     border: none;
-    border-radius: 50%; /* Botões circulares para realçar os emojis */
+    border-radius: 50%;           /* Faz o botão ficar perfeitamente redondo */
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease; /* Transição suave para animações */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Efeito quando o usuário passa o mouse por cima do botão */
 button:hover {
     opacity: 0.85;
-    transform: scale(1.1); /* Efeito interativo ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho do botão em 10% */
 }
 
+/* Efeito rápido no momento exato do clique */
 button:active {
-    transform: scale(0.95);
+    transform: scale(0.95); /* Encolhe levemente o botão simulando um clique físico */
 }
 
+/* Cores de fundo específicas para cada ID de botão */
 #rock { background-color: #ff0080; }
 #paper { background-color: #0084ff; }
 #scissors { background-color: #00ffbf; }
@@ -76,13 +84,15 @@ p {
     color: #444;
 }
 
+/* Estilo do texto de resultado da rodada */
 #result {
     font-size: 22px;
     margin-bottom: 25px;
     color: #111;
-    min-height: 30px;
+    min-height: 30px; /* Mantém o espaço reservado mesmo antes do primeiro jogo */
 }
 
+/* Cores personalizadas para os números do placar */
 .your-score span {
     color: #ffae00;
     font-size: 22px;

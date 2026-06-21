@@ -3,25 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Vincula o arquivo de estilos CSS externo -->
     <link rel="stylesheet" href="style.css">
     <title>Jo Ken Pô Espacial</title>
 </head>
 <body>
+    <!-- Container principal que centraliza o conteúdo do jogo na tela -->
     <div class="container">
         <h1>Jo Ken Pô</h1>
 
+        <!-- Bloco que agrupa os botões de escolha do jogador -->
         <div class="buttons">
+            <!-- Cada botão envia sua respectiva string ao ser clicado usando 'onclick' -->
             <button id="rock" onclick="playHuman('rock')">&#128074;</button>
             <button id="paper" onclick="playHuman('paper')">&#9995;</button>
             <button id="scissors" onclick="playHuman('scissors')">&#9996;</button>
         </div>
 
+        <!-- Parágrafo dinâmico onde o JavaScript injetará o resultado da rodada -->
         <p id="result">Escolha uma opção para começar! 🚀</p>
         
+        <!-- Exibição dos placares com Spans para atualização numérica via JS -->
         <p class="your-score">Sua pontuação: <span id="score">0</span></p>
         <p class="machine-score">Pontuação da máquina: <span id="computer-score">0</span></p>
     </div>
 
+    <!-- Importa a lógica do jogo escrita em JavaScript -->
     <script src="scripts.js"></script>
 </body>
 </html>
