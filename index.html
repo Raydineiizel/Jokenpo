@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Jo Ken Pô</title>
 </head>
+
 <body>
     <div class="container">
         <h1>Jo Ken Pô</h1>
-        <button id="rock">&#128074</button>
-        <button id="paper">&#9995</button>
-        <button id="scissors">&#9996</button>
 
-        <p>Sua pontuação: <span id="score">0</span></p>
-        <p>Pontuação da máquina: <span id="computer-score">0</span></p>
+        <div class="buttons">
+            <button id="rock">&#128074</button>
+            <button id="paper">&#9995</button>
+            <button id="scissors">&#9996</button>
+        </div>
+        <p id="result"></p>
+        
+        <p class="your-score">Sua pontuação: <span id="score">0</span></p>
+        <p class="machine-score">Pontuação da máquina: <span id="computer-score">0</span></p>
     </div>
 </body>
+
 </html>
