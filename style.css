@@ -2,57 +2,93 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 body {
-    background: url('https://github.com/Raydineiizel/Jokenp-/blob/main/assets/38521.jpg?raw=true');
+    /* Link de mídia direta resolvido para compatibilidade com o GitHub */
+    background: url('https://githubusercontent.com');
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
+
 .container {
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.92); /* Efeito translúcido para combinar com o fundo */
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    Justify-content: center;   
+    justify-content: center;   
+    box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.4);
+    min-width: 360px;
+    text-align: center;
 }
+
+h1 {
+    color: #2b2b2b;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
 .buttons {
-    margin: 30px 0;
+    margin: 25px 0;
     display: flex;
-    gap: 40px;
+    gap: 25px;
 }
 
 button {
-    padding: 10px;
-    font-size : 50px;
+    width: 85px;
+    height: 85px;
+    font-size: 42px;
     cursor: pointer;
     border: none;
-    border-radius: 10px;
-    transition: opacity 0.5s ease-in-out;
+    border-radius: 50%; /* Botões circulares para realçar os emojis */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
+
 button:hover {
-    opacity: 0.7;
+    opacity: 0.85;
+    transform: scale(1.1); /* Efeito interativo ao passar o mouse */
 }
-#rock {
-    background-color: #ff0080;
+
+button:active {
+    transform: scale(0.95);
 }
-#paper {
-    background-color: #0084ff;
-}
-#scissors {
-    background-color: #00ffbf;
-}
+
+#rock { background-color: #ff0080; }
+#paper { background-color: #0084ff; }
+#scissors { background-color: #00ffbf; }
+
 p {
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    font-size: 18px;
+    color: #444;
 }
-.your-score  span {
+
+#result {
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #111;
+    min-height: 30px;
+}
+
+.your-score span {
     color: #ffae00;
+    font-size: 22px;
 }
+
 .machine-score span {
     color: #ae00ff;
+    font-size: 22px;
 }
